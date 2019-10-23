@@ -14,19 +14,28 @@ class ViewController: UIViewController {
     @IBOutlet weak var solutionOut: UILabel!
     @IBOutlet weak var changer: UISegmentedControl!
     var zeichen:String = ""
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
-    
-
-    @IBAction func switchMode(_ sender: Any) {
-        
-        //switch switchMode.selectedSegmentIndex{
+    @IBAction func indexChanged(_ sender: Any) {
+        let segIndex = changer.selectedSegmentIndex
+        let segTitle = changer.titleForSegment(at: segIndex)
+        switch segIndex {
+        case 0:
+            zeichen = "+"
+        case 1:
+            zeichen = "-"
+        default:
+            zeichen = "+"
+        }
+        print(zeichen)
     }
+    
     @IBAction func buttonPressed(_ sender: Any) {
-   
+        
     }
     
 }

@@ -23,7 +23,7 @@
                                     <segment title="-"/>
                                 </segments>
                                 <connections>
-                                    <action selector="switchMode:" destination="BYZ-38-t0r" eventType="valueChanged" id="r65-mb-cP4"/>
+                                    <action selector="indexChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Kmq-pw-2w7"/>
                                 </connections>
                             </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lHd-tq-8yp">
