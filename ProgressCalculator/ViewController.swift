@@ -13,7 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var inputSecond: UITextField!
     @IBOutlet weak var solutionOut: UILabel!
     @IBOutlet weak var changer: UISegmentedControl!
-    var zeichen:String = ""
+    var zeichen:String = "+"
+    var ergebnis:Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +30,21 @@ class ViewController: UIViewController {
         case 1:
             zeichen = "-"
         default:
+            print("Bims im Default"
             zeichen = "+"
         }
-        print(zeichen)
     }
     
     @IBAction func buttonPressed(_ sender: Any) {
+        let zahl1: Int? = Int(inputFirst.text!)
+        let zahl2: Int? = Int(inputSecond.text!)
+        if zeichen.isEqual("+") {
+            self.ergebnis = zahl1! + zahl2!
+        }
+        if zeichen.isEqual("-") {
+            self.ergebnis = zahl1! - zahl2!
+        }
+        solutionOut.text = String(ergebnis)
         
     }
     
